@@ -1,0 +1,20 @@
+{
+  "name": "compiler",
+  "version": "1.0.0",
+  "description": "compiler for tplangs",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": [],
+  "author": "GitHub",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "^2.0.0"
+  },
+  "dependencies": {
+    "bootstrap": "^4.1.1",
+    "compile-run": "^1.2.2",
+    "jquery": "^3.3.1"
+  }
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Compiler</title>
+    <link href="https://cdn.alloyui.com/3.0.1/aui-css/css/bootstrap.min.css" rel="stylesheet"></link>
+    <link rel="stylesheet" href="assets/css/style.css"></link>
+    <script src="https://cdn.alloyui.com/3.0.1/aui/aui-min.js"></script>
+  </head>
+  <body>
+      <div id="header">
+        <Button id="compileBtn">Compile</Button>
+      </div>
+      <div class="row wrapper">
+        <div class="col-md-7 editor-row">
+            <div id="editor"></div>
+        </div>
+        <div class="col-md-5">
+            <div id="output">
+                > Console Output
+            </div>
+        </div>
+      </div>
+    <script>
+      var initCode = 'public class Main {\n    public static void main(String[] args) {\n\n\n    }\n}';
+      var editor = null;
+      YUI().use(
+        'aui-ace-editor',
+        function(Y) {
+          editor = new Y.AceEditor({
+              boundingBox: '#editor',
+              mode: 'java',
+              value: initCode,
+
+          }).render();
+        }
+      );
+      require('./renderer.js');
+    </script>
+  </body>
+</html>
